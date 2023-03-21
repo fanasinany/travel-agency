@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+body {
+  font-family: Poppins;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  height: 60px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #3b3b3b;
+}
+
+.nav_center {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav_center li {
+  margin: 0 16px;
+}
+
+.nav_right {
+  display: flex;
+  align-items: center;
+}
+
+.btnDevis {
+  background-color: #318194;
+  height: 40px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-family: Poppins;
+  width: 150px;
+  margin-left: 24px;
+}
+
+.link-phone-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.link-phone-header::after {
+  content: "";
+  position: absolute;
+  background-color: #3b3b3b;
+  width: 100%;
+  height: 1px;
+  bottom: -5px;
+}
+.link-phone-header svg {
+  margin-right: 8px;
+}/*# sourceMappingURL=style.css.map */
