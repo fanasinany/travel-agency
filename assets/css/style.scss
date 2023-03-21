@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 body {
     font-family: Poppins;
@@ -8,6 +8,12 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button{
+    border: none;
+    font-family: Poppins;
+    cursor: pointer;
 }
 
 .container {
@@ -52,8 +58,6 @@ header {
     height: 40px;
     color: white;
     border-radius: 8px;
-    border: none;
-    font-family: Poppins;
     width: 150px;
     margin-left: 24px;
 }
@@ -65,13 +69,75 @@ header {
     &::after{
         content: "";
         position: absolute;
-        background-color: #3b3b3b;
+        background-color: #bebebe;
         width: 100%;
         height: 1px;
         bottom: -5px;
     }
     svg{
         margin-right: 8px;
+    }
+}
+
+.home_wrapper{
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    background-image: url("../images/home-fond.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    .container{
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .overlay{
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.19;
+    }
+}
+
+.home_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &>h1{
+        margin: 0;
+        font-size: 52px;
+        text-align: center;
+        line-height: 60px;
+        span{
+            font-family: "Dancing Script";
+        }
+    }
+    &>p{
+        font-size: 20px;
+        margin: 32px 0;
+    }
+}
+
+.btnExplore{
+    height: 50px;
+    color: #FFC215;
+    background-color: transparent;
+    border: 2px solid #FFC215;
+    width: 140px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: #FFC215;
+        color: white;
     }
 }
 
