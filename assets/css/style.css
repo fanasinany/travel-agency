@@ -19,10 +19,16 @@ button {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 @media (max-width: 1440px) {
   .container {
     max-width: 1200px;
+  }
+}
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 32px;
   }
 }
 
@@ -101,10 +107,6 @@ header nav {
 }
 .home_wrapper .overlay {
   background-color: black;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0.19;
 }
 
@@ -156,6 +158,11 @@ footer {
   padding: 32px 0;
   gap: 16px;
 }
+@media (max-width: 1240px) {
+  .footer_wrapper {
+    padding: 32px;
+  }
+}
 .footer_wrapper h2 {
   font-size: 18px;
   font-weight: 600;
@@ -203,4 +210,89 @@ footer {
 }
 .contact_information > div span {
   margin-left: 12px;
+  word-break: break-word;
+}
+
+.destination_wrapper {
+  background-image: url("../images/destination-over.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+}
+.destination_wrapper .overlay {
+  background-color: white;
+  opacity: 0.8;
+}
+.destination_wrapper .container {
+  z-index: 1;
+  position: relative;
+  color: black;
+}
+.destination_wrapper .container h2 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.destination_wrapper .container > p {
+  text-align: center;
+}
+
+.card_destination_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.card_destination_wrapper > div {
+  height: 300px;
+  width: calc(33.3333% - 16px);
+  border-radius: 16px;
+  padding: 32px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  position: relative;
+  line-height: 20px;
+  background-position: center;
+}
+.card_destination_wrapper > div:nth-child(1), .card_destination_wrapper > div:nth-child(2) {
+  width: calc(50% - 16px);
+}
+@media (max-width: 950px) {
+  .card_destination_wrapper > div:nth-child(1), .card_destination_wrapper > div:nth-child(2) {
+    width: 100%;
+  }
+}
+.card_destination_wrapper > div > span {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  z-index: 1;
+}
+.card_destination_wrapper > div .overlay {
+  background-color: black;
+  opacity: 0.19;
+  left: 0;
+}
+@media (max-width: 1100px) {
+  .card_destination_wrapper > div {
+    height: 250px;
+  }
+}
+@media (max-width: 950px) {
+  .card_destination_wrapper > div {
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
