@@ -2,6 +2,7 @@
 body {
   font-family: Poppins;
   margin: 0;
+  font-size: 14px;
 }
 
 a {
@@ -19,6 +20,11 @@ button {
   max-width: 1400px;
   margin: 0 auto;
 }
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 
 header {
   height: 60px;
@@ -26,6 +32,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 2;
+  background-color: white;
 }
 header nav {
   display: flex;
@@ -135,4 +143,64 @@ header nav {
 .btnExplore:hover {
   background-color: #FFC215;
   color: white;
+}
+
+footer {
+  background-color: #318194;
+  color: white;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  gap: 16px;
+}
+.footer_wrapper h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+}
+.footer_wrapper > div {
+  width: 25%;
+}
+.footer_wrapper > div ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer_wrapper > div ul li {
+  position: relative;
+  margin: 0px 0 6px 16px;
+}
+.footer_wrapper > div ul li::before {
+  position: absolute;
+  content: "";
+  color: #FFF;
+  top: 3px;
+  left: -20px;
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg width='1em' height='1em' viewBox='0 0 16 16' class='bi bi-chevron-right' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  height: 14px;
+  width: 14px;
+}
+.footer_wrapper > div ul li:hover::before {
+  left: -16px;
+}
+
+.social_link svg {
+  margin-right: 16px;
+  width: 28px;
+}
+
+.contact_information > div {
+  display: flex;
+  margin-bottom: 8px;
+}
+.contact_information > div svg {
+  width: 18px;
+  margin-top: 4px;
+}
+.contact_information > div span {
+  margin-left: 12px;
 }/*# sourceMappingURL=style.css.map */
