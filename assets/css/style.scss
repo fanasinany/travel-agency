@@ -148,7 +148,6 @@ header {
 .home_wrapper {
     margin-top: 60px;
     height: calc(100vh - 60px);
-    background-image: url("../images/home-fond.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -162,10 +161,17 @@ header {
 
     .overlay {
         background-color: black;
-        opacity: 0.19;
+        opacity: 0.4;
     }
 }
 
+#home{ animation: changeBg 6s infinite; }
+@keyframes changeBg{
+   0%,100%  {background-image: url("../images/home-animation/2.jpg");}
+   25% {background-image: url("../images/home-animation/1.jpg");}
+   50% {background-image: url("../images/home-animation/3.jpg");}
+   75% {background-image: url("../images/home-animation/4.jpg");}
+}
 .home_container {
     height: 100%;
     display: flex;
