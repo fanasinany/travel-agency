@@ -16,6 +16,11 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea {
+  font-family: Poppins;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -220,6 +225,26 @@ footer {
 .offer_wrapper {
   background-image: url("../images/offer-over.jpg");
 }
+.offer_wrapper > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.devis_wrapper {
+  background-image: url("../images/contact-over.jpg");
+}
+.devis_wrapper > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.devis_wrapper > .container .sendBtn {
+  background-color: #77080B;
+  align-self: center;
+}
 
 .card_destination_wrapper {
   display: flex;
@@ -396,5 +421,72 @@ footer {
   }
   .card_offer_wrapper > div > img {
     height: 300px;
+  }
+}
+
+.other_choice {
+  background-color: #FFC215;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 8px;
+  height: 40px;
+  width: 150px;
+  margin-top: 32px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.devis_container {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.devis_container > div {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.devis_container > div input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #c5c5c5;
+  padding: 0 8px;
+}
+.devis_container > div input:focus {
+  outline: none;
+}
+@media (max-width: 760px) {
+  .devis_container > div input {
+    width: 100%;
+    flex-grow: unset;
+    flex-shrink: unset;
+    flex-basis: unset;
+  }
+}
+.devis_container textarea {
+  border-radius: 8px;
+  border: 1px solid #c5c5c5;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+.devis_container textarea:focus {
+  outline: none;
+}
+@media (max-width: 760px) {
+  .devis_container {
+    padding: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
