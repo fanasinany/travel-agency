@@ -77,6 +77,10 @@ header {
     }
 }
 
+.logo_coriandre>img {
+    height: 60px;
+}
+
 .nav_center {
     display: flex;
     list-style: none;
@@ -95,8 +99,10 @@ header {
         background-color: white;
         width: 100%;
         left: 0;
-        border-top: 1px solid #c5c5c5;;
-        &>li{
+        border-top: 1px solid #c5c5c5;
+        ;
+
+        &>li {
             padding: 16px 32px;
             margin: 0;
         }
@@ -110,8 +116,9 @@ header {
 .nav_right {
     display: flex;
     align-items: center;
+
     @media(max-width: 590px) {
-        &>a{
+        &>a {
             display: none;
         }
     }
@@ -124,6 +131,10 @@ header {
     border-radius: 8px;
     width: 150px;
     margin-left: 24px;
+
+    @media(max-width: 460px) {
+        display: none;
+    }
 }
 
 .link-phone-header {
@@ -165,13 +176,30 @@ header {
     }
 }
 
-#home{ animation: changeBg 6s infinite; }
-@keyframes changeBg{
-   0%,100%  {background-image: url("../images/home-animation/2.jpg");}
-   25% {background-image: url("../images/home-animation/1.jpg");}
-   50% {background-image: url("../images/home-animation/3.jpg");}
-   75% {background-image: url("../images/home-animation/4.jpg");}
+#home {
+    animation: changeBg 6s infinite;
 }
+
+@keyframes changeBg {
+
+    0%,
+    100% {
+        background-image: url("../images/home-animation/2.jpg");
+    }
+
+    25% {
+        background-image: url("../images/home-animation/1.jpg");
+    }
+
+    50% {
+        background-image: url("../images/home-animation/3.jpg");
+    }
+
+    75% {
+        background-image: url("../images/home-animation/4.jpg");
+    }
+}
+
 .home_container {
     height: 100%;
     display: flex;
@@ -188,11 +216,16 @@ header {
         span {
             font-family: "Dancing Script";
         }
+
+        @media(max-width: 520px) {
+            font-size: 40px;
+        }
     }
 
     &>p {
         font-size: 20px;
         margin: 32px 0;
+        text-align: center;
     }
 }
 
@@ -844,4 +877,50 @@ footer {
             }
         }
     }
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 300px;
+    position: absolute;
+    bottom: 34px;
+    opacity: 0.7;
+}
+
+.mouse {
+	width: 30px;
+	height: 45px;
+	border: 2px solid #ffffff;;
+	border-radius: 60px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #ffffff;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 30px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 30px;
+	}
 }
