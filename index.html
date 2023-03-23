@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Agency</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav class="container">
         <a href="">CR Tours</a>
-        <ul class="nav_center">
+        <ul class="nav_center" id="nav-center">
           <li><a href="#home">Home</a></li>
-          <li><a href="#tours">Tours</a></li>
+          <li><a href="#destination">Destination</a></li>
           <li><a href="#offre">Offre</a></li>
           <li><a href="#location">Location</a></li>
         </ul>
@@ -33,9 +38,54 @@
                 fill="#707070"
               />
             </svg>
-            0341256489</a
+            034 38 145 56</a
           >
           <button class="btnDevis">Obtenir devis</button>
+          <button class="btnMenu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="21"
+              viewBox="0 0 30 21"
+            >
+              <g
+                id="Icon_feather-menu"
+                data-name="Icon feather-menu"
+                transform="translate(-3 -7.5)"
+              >
+                <path
+                  id="Tracé_9"
+                  data-name="Tracé 9"
+                  d="M4.5,18h27"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Tracé_10"
+                  data-name="Tracé 10"
+                  d="M4.5,9h27"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Tracé_11"
+                  data-name="Tracé 11"
+                  d="M4.5,27h27"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+              </g>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -706,7 +756,7 @@
               <span>Voyage d'affaires</span>
               <span>Tête de cortège</span>
               <span>Location avec sonorisation (TAM-TAM)</span>
-            </div>            
+            </div>
           </div>
         </div>
       </section>
@@ -932,5 +982,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      $(".btnMenu").click(function () {
+        $("#nav-center").toggleClass("active")
+      });
+    </script>
   </body>
 </html>

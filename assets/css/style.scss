@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Poppins;
     margin: 0;
@@ -52,6 +56,24 @@ header {
         justify-content: space-between;
         align-items: center;
         color: #3b3b3b;
+        position: relative;
+    }
+
+    .btnMenu {
+        display: none;
+        background-color: transparent;
+        padding: 0;
+        margin-left: 16px;
+
+        svg {
+            height: 24px;
+        }
+    }
+
+    @media(max-width: 850px) {
+        .btnMenu {
+            display: flex;
+        }
     }
 }
 
@@ -64,11 +86,35 @@ header {
     li {
         margin: 0 16px;
     }
+
+    &.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        border-top: 1px solid #c5c5c5;;
+        &>li{
+            padding: 16px 32px;
+            margin: 0;
+        }
+    }
+
+    @media(max-width: 850px) {
+        display: none;
+    }
 }
 
 .nav_right {
     display: flex;
     align-items: center;
+    @media(max-width: 590px) {
+        &>a{
+            display: none;
+        }
+    }
 }
 
 .btnDevis {
@@ -216,13 +262,14 @@ footer {
     @media(max-width: 890px) {
         flex-wrap: wrap;
         column-gap: 32px;
-        &>div{
+
+        &>div {
             width: calc(50% - 16px);
         }
     }
 
     @media(max-width: 520px) {
-        &>div{
+        &>div {
             width: 100%;
         }
     }
@@ -762,19 +809,22 @@ footer {
     }
 }
 
-.prestation{
+.prestation {
     padding: 32px 0;
-    &>div{
+
+    &>div {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        &>span{
+
+        &>span {
             font-size: 18px;
             margin: 16px;
             position: relative;
             text-align: center;
-            &::before{
+
+            &::before {
                 content: "";
                 position: absolute;
                 height: 100%;
@@ -782,7 +832,8 @@ footer {
                 background-color: #c5c5c5;
                 left: -16px;
             }
-            &:nth-child(1)::before{
+
+            &:nth-child(1)::before {
                 display: none;
             }
         }
