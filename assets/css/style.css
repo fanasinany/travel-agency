@@ -199,6 +199,21 @@ footer {
 .footer_wrapper > div ul li:hover::before {
   left: -16px;
 }
+@media (max-width: 890px) {
+  .footer_wrapper {
+    flex-wrap: wrap;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+  .footer_wrapper > div {
+    width: calc(50% - 16px);
+  }
+}
+@media (max-width: 520px) {
+  .footer_wrapper > div {
+    width: 100%;
+  }
+}
 
 .social_link svg {
   margin-right: 16px;
@@ -489,4 +504,211 @@ footer {
   .devis_container {
     padding: 16px;
   }
+}
+
+.location_wrapper {
+  padding: 64px 0;
+}
+
+.loc_part_one h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+}
+.loc_part_one .advantage_wrapper {
+  display: flex;
+  margin-top: 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loc_part_one .card_advantage {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  padding: 16px;
+  border-radius: 16px;
+  color: #707070;
+  height: 140px;
+  max-width: 250px;
+}
+.loc_part_one .card_advantage > div {
+  display: flex;
+  align-items: center;
+}
+.loc_part_one .card_advantage > div .icons {
+  border-radius: 12px;
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbd2b2;
+}
+.loc_part_one .card_advantage > div span {
+  font-weight: 600;
+  color: black;
+  margin-left: 12px;
+}
+@media (max-width: 990px) {
+  .loc_part_one .advantage_wrapper {
+    justify-content: flex-start;
+  }
+  .loc_part_one .card_advantage {
+    max-width: unset;
+    width: calc(50% - 48px);
+  }
+}
+@media (max-width: 600px) {
+  .loc_part_one .card_advantage {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+.loc_part_two {
+  padding: 32px 0;
+}
+.loc_part_two h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.loc_part_two .vans_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.loc_part_two .vans_wrapper > div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.loc_part_two .vans_wrapper > div > img {
+  height: 150px;
+  border-radius: 16px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loc_part_two .vans_wrapper .description_van {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loc_part_two .vans_wrapper .description_van .place {
+  color: #707070;
+  display: flex;
+  align-items: center;
+}
+.loc_part_two .vans_wrapper .description_van .place svg {
+  height: 14px;
+  margin-right: 2px;
+}
+.loc_part_two .vans_wrapper .description_van .name {
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (max-width: 1090px) {
+  .loc_part_two .vans_wrapper {
+    gap: 16px;
+  }
+  .loc_part_two .vans_wrapper > div > img {
+    height: 130px;
+  }
+}
+@media (max-width: 1020px) {
+  .loc_part_two .vans_wrapper > div {
+    flex-grow: unset;
+    flex-shrink: unset;
+    flex-basis: unset;
+    width: calc(50% - 16px);
+  }
+  .loc_part_two .vans_wrapper > div > img {
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .loc_part_two .vans_wrapper > div {
+    width: 100%;
+  }
+  .loc_part_two .vans_wrapper > div > img {
+    height: 250px;
+  }
+}
+
+.contact_global {
+  padding: 0 0 64px 0;
+}
+
+.contact_global_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.contact_global_wrapper > div {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  height: 140px;
+}
+.contact_global_wrapper > div > svg {
+  height: 30px;
+}
+.contact_global_wrapper > div > span {
+  margin-top: 16px;
+  word-break: break-word;
+}
+@media (max-width: 900px) {
+  .contact_global_wrapper {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .contact_global_wrapper > div {
+    width: calc(50% - 50px);
+    max-width: unset;
+    height: 110px;
+  }
+}
+@media (max-width: 540px) {
+  .contact_global_wrapper > div {
+    width: 100%;
+  }
+}
+
+.prestation {
+  padding: 32px 0;
+}
+.prestation > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.prestation > div > span {
+  font-size: 18px;
+  margin: 16px;
+  position: relative;
+  text-align: center;
+}
+.prestation > div > span::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #c5c5c5;
+  left: -16px;
+}
+.prestation > div > span:nth-child(1)::before {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
